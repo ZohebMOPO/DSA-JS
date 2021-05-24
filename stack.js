@@ -1,19 +1,14 @@
-var ar = [];
+var stacks = [];
 
-var word = "kayak";
+var count = 0;
 
-var reversed = "";
-
-for (let i = 0; i < word.length; i++) {
-  ar.push(word[i]);
+for (let i = 0; i < stacks.length; i++) {
+  if (stacks[i] > stacks[i - 1]) {
+    ++count;
+  } else {
+    count = 0;
+    count++;
+  }
 }
 
-for (let i = 0; i < word.length; i++) {
-  reversed += ar.pop();
-}
-
-if (word === reversed) {
-  console.log("The word is palindrome");
-} else {
-  console.log("The word is not Palindrome");
-}
+console.log(count);
